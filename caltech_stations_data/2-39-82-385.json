@@ -1,0 +1,62 @@
+[
+    {
+        "_id": "5bc939a0f9af8b0dc677d78d",
+        "clusterID": "0039",
+        "connectionTime": "Mon, 03 Sep 2018 18:05:27 GMT",
+        "disconnectTime": "Mon, 03 Sep 2018 19:37:13 GMT",
+        "doneChargingTime": "Mon, 03 Sep 2018 19:37:11 GMT",
+        "kWhDelivered": 10.184,
+        "sessionID": "2_39_82_385_2018-09-03 18:05:27.243003",
+        "siteID": "0002",
+        "spaceID": "CA-148",
+        "stationID": "2-39-82-385",
+        "timezone": "America/Los_Angeles",
+        "userID": null,
+        "userInputs": null
+    },
+    {
+        "_id": "5bc93a46f9af8b0dc677d82d",
+        "clusterID": "0039",
+        "connectionTime": "Wed, 05 Sep 2018 18:11:10 GMT",
+        "disconnectTime": "Wed, 05 Sep 2018 18:43:05 GMT",
+        "doneChargingTime": "Wed, 05 Sep 2018 18:43:01 GMT",
+        "kWhDelivered": 1.636,
+        "sessionID": "2_39_82_385_2018-09-05 18:11:09.838845",
+        "siteID": "0002",
+        "spaceID": "CA-148",
+        "stationID": "2-39-82-385",
+        "timezone": "America/Los_Angeles",
+        "userID": null,
+        "userInputs": null
+    },
+    {
+        "_id": "5bc93bbff9af8b0dc677d9a8",
+        "clusterID": "0039",
+        "connectionTime": "Mon, 10 Sep 2018 16:22:56 GMT",
+        "disconnectTime": "Mon, 10 Sep 2018 21:59:04 GMT",
+        "doneChargingTime": "Mon, 10 Sep 2018 17:09:37 GMT",
+        "kWhDelivered": 1.373,
+        "sessionID": "2_39_82_385_2018-09-10 16:22:55.703911",
+        "siteID": "0002",
+        "spaceID": "CA-148",
+        "stationID": "2-39-82-385",
+        "timezone": "America/Los_Angeles",
+        "userID": null,
+        "userInputs": null
+    },
+    {
+        "_id": "5be2ff7df9af8b2b0edfa3f4",
+        "clusterID": 39,
+        "connectionTime": "Thu, 18 Oct 2018 20:15:37 GMT",
+        "disconnectTime": "Thu, 18 Oct 2018 23:53:38 GMT",
+        "doneChargingTime": "Thu, 18 Oct 2018 22:50:40 GMT",
+        "kWhDelivered": 5.45,
+        "sessionID": "2_39_82_385_2018-10-18 20:15:37.592702",
+        "siteID": 2,
+        "spaceID": "CA-148",
+        "stationID": "2-39-82-385",
+        "timezone": "America/Los_Angeles",
+        "userID": null,
+        "userInputs": null
+    }
+]
