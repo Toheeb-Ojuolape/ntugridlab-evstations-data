@@ -4,9 +4,9 @@ This repo would be used solely for data collection and manipulation to develop r
 
 ## TODOs
 - [x] Group the data by charging stations based on location
-- []  Group data by month
-- []  Obtain monthly weather data for each location and add to dataset (temperature, humidity, solar intensity)
-- []  Obtain road network data and include in dataset
-- []  TBD
+- [ ]  Group data by month
+- [ ]  Obtain monthly weather data for each location and add to dataset (temperature, humidity, solar intensity)
+- [ ]  Obtain road network data and include in dataset
+- [ ]  TBD
 
  
