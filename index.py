@@ -1,34 +1,43 @@
 import json
 import os
-from collections import defaultdict
+import pandas as pd
+from datetime import datetime
 
 # Function to load data from a JSON file
 def load_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-# Function to group data by stationID and save to individual JSON files
-def group_and_save_data(data):
-    # Extract the list of items
-    items = data["_items"]
+# Function to process and save data
+def process_and_save_data(data):
+    # Check if data is in the correct format (list of dictionaries)
+    if isinstance(data, dict) and "_items" in data:
+        data = data["_items"]
+    elif not isinstance(data, list):
+        raise ValueError("The input data must be a list of dictionaries or a dictionary containing an '_items' key.")
 
-    # Group data by stationID
-    grouped_data = defaultdict(list)
-    for record in items:
-        station_id = record["stationID"]
-        grouped_data[station_id].append(record)
+    # Load data into a pandas DataFrame
+    df = pd.DataFrame(data)
 
-    # Create a directory to store the output JSON files
+    # Convert connectionTime and disconnectTime to datetime
+    df['connectionTime'] = pd.to_datetime(df['connectionTime'], utc=True)
+    df['disconnectTime'] = pd.to_datetime(df['disconnectTime'], utc=True)
+
+    # Extract the month from connectionTime
+    df['month'] = df['connectionTime'].dt.to_period('M')
+
+    # Group by month, siteID, stationID, timezone, and spaceID, and sum kWhDelivered
+    grouped = df.groupby(['month', 'siteID', 'stationID', 'timezone', 'spaceID']).agg({'kWhDelivered': 'sum'}).reset_index()
+
+    # Create a directory to store the output CSV files
     output_dir = "jpl_stations_data"
     os.makedirs(output_dir, exist_ok=True)
 
-    # Write each group to a separate JSON file
-    for station_id, records in grouped_data.items():
-        file_path = os.path.join(output_dir, f"{station_id}.json")
-        with open(file_path, 'w') as json_file:
-            json.dump(records, json_file, indent=4)
+    # Save each stationID's data to a separate CSV file
+    for station_id, station_df in grouped.groupby('stationID'):
+        station_df.to_csv(os.path.join(output_dir, f"{station_id}.csv"), index=False)
 
-    print("JSON files created successfully in the 'JPL stations_data' directory.")
+    print("CSV files created successfully in the 'jpl_stations_data' directory.")
 
 # Main script
 if __name__ == "__main__":
@@ -38,5 +47,5 @@ if __name__ == "__main__":
     # Load data from the JSON file
     data = load_json(input_file_path)
 
-    # Group the data by stationID and save to individual JSON files
-    group_and_save_data(data)
+    # Process the data and save to individual CSV files
+    process_and_save_data(data)
