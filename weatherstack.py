@@ -4,7 +4,7 @@ import os
 from datetime import datetime, timedelta
 
 # Your Weatherstack API key
-API_KEY = 'YOUR_API_KEY'
+API_KEY = "e477fb6ef2d4e02fe3d39df723fd2202"
 
 # Function to fetch historical weather data
 def fetch_historical_weather(location, start_date, end_date):
@@ -31,13 +31,13 @@ def save_data_to_file(data, file_name):
 
 # Main script to fetch data every 60 days from 2018-04-01 to 2024-06-01
 if __name__ == "__main__":
-    location = 91125 # this is the zipcode for caltech
-    start_date = datetime(2018, 4, 1)
+    location = 91109 # this is the zipcode for caltech
+    start_date = datetime(2018, 9, 1)
     end_date = datetime(2024, 6, 1)
     delta = timedelta(days=60)
     
     current_date = start_date
-    output_dir = "weather_data"
+    output_dir = "jpl_weather_data"
     create_directory(output_dir)
     
     while current_date < end_date:

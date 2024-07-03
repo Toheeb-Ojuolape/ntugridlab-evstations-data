@@ -1,0 +1,11 @@
+month,siteID,stationID,timezone,spaceID,kWhDelivered
+2018-05,0002,2-39-129-563,America/Los_Angeles,CA-509,110.399
+2018-06,0002,2-39-129-563,America/Los_Angeles,CA-509,112.466
+2018-07,0002,2-39-129-563,America/Los_Angeles,CA-509,52.171
+2018-08,0002,2-39-129-563,America/Los_Angeles,CA-509,130.603
+2018-09,0002,2-39-129-563,America/Los_Angeles,CA-509,132.706
+2018-10,2,2-39-129-563,America/Los_Angeles,CA-509,80.399
+2018-10,0002,2-39-129-563,America/Los_Angeles,CA-509,10.418
+2018-11,0002,2-39-129-563,America/Los_Angeles,CA-509,29.477
+2018-12,0002,2-39-129-563,America/Los_Angeles,CA-509,3.307
+2019-01,0002,2-39-129-563,America/Los_Angeles,CA-509,26.11
