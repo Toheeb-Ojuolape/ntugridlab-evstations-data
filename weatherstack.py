@@ -4,7 +4,7 @@ import os
 from datetime import datetime, timedelta
 
 # Your Weatherstack API key
-API_KEY = "e477fb6ef2d4e02fe3d39df723fd2202"
+API_KEY = "YOUR_API_KEY"
 
 # Function to fetch historical weather data
 def fetch_historical_weather(location, start_date, end_date):
