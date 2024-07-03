@@ -46,6 +46,6 @@ if __name__ == "__main__":
 
     # Load data from the JSON file
     data = load_json(input_file_path)
-
+    print(len(data))
     # Process the data and save to individual CSV files
     process_and_save_data(data)
