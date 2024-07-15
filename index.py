@@ -30,22 +30,21 @@ def process_and_save_data(data):
     grouped = df.groupby(['month', 'siteID', 'stationID', 'timezone', 'spaceID']).agg({'kWhDelivered': 'sum'}).reset_index()
 
     # Create a directory to store the output CSV files
-    output_dir = "jpl_stations_data"
+    output_dir = "caltech_stations_data"
     os.makedirs(output_dir, exist_ok=True)
 
     # Save each stationID's data to a separate CSV file
     for station_id, station_df in grouped.groupby('stationID'):
         station_df.to_csv(os.path.join(output_dir, f"{station_id}.csv"), index=False)
 
-    print("CSV files created successfully in the 'jpl_stations_data' directory.")
+    print("CSV files created successfully in the 'caltech_stations_data' directory.")
 
 # Main script
 if __name__ == "__main__":
     # Path to the input JSON file
-    input_file_path = './jpl.json'
+    input_file_path = './acndata_sessions.json'
 
     # Load data from the JSON file
     data = load_json(input_file_path)
-    print(len(data))
     # Process the data and save to individual CSV files
     process_and_save_data(data)

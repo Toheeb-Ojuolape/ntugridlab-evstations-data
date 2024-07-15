@@ -31,7 +31,7 @@ def save_data_to_file(data, file_name):
 
 # Main script to fetch data every 60 days from 2018-04-01 to 2024-06-01
 if __name__ == "__main__":
-    location = 91109 # this is the zipcode for caltech
+    location = 91125 # this is the zipcode for caltech
     start_date = datetime(2018, 9, 1)
     end_date = datetime(2024, 6, 1)
     delta = timedelta(days=60)
