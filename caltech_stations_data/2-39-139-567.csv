@@ -4,8 +4,7 @@ month,siteID,stationID,timezone,spaceID,kWhDelivered
 2018-07,0002,2-39-139-567,America/Los_Angeles,CA-513,10.896
 2018-08,0002,2-39-139-567,America/Los_Angeles,CA-513,122.102
 2018-09,0002,2-39-139-567,America/Los_Angeles,CA-513,193.186
-2018-10,2,2-39-139-567,America/Los_Angeles,CA-513,170.879
-2018-10,0002,2-39-139-567,America/Los_Angeles,CA-513,10.79
+2018-10,0002,2-39-139-567,America/Los_Angeles,CA-513,181.66899999999998
 2018-11,0002,2-39-139-567,America/Los_Angeles,CA-513,98.303
 2018-12,0002,2-39-139-567,America/Los_Angeles,CA-513,65.9
 2019-01,0002,2-39-139-567,America/Los_Angeles,CA-513,31.335
